@@ -11,13 +11,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0.5">
 
             <ImageView
                 android:id="@+id/image_Gep_3"
@@ -42,27 +44,26 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_height="match_parent"
                 android:text="@string/gep"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="25sp"
+                android:gravity="center"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginStart="45dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="0.5"
+            android:gravity="end">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_height="match_parent"
                 android:text="@string/felhasznalo"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="25sp"
+                android:gravity="center"/>
 
             <ImageView
                 android:id="@+id/image_Felhasznalo_1"
