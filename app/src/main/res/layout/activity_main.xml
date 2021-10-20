@@ -1,18 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Gep_3"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Gep_2"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Gep_1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gep"
+                android:textSize="30sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginStart="45dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/felhasznalo"
+                android:textSize="30sp"
+                android:gravity="center"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Felhasznalo_1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Felhasznalo_2"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart2"
+                android:id="@+id/image_Felhasznalo_3"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dontetlenek"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/textView_Dontetlenek"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rock"
+        android:layout_gravity="center"
+        android:id="@+id/imageView_Gep"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gep_dontes"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/textView_GepDontese"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rock"
+        android:layout_gravity="center"
+        android:id="@+id/imageView_Felhasznalo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/felhasznalo_dontes"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/textView_FelhasznaloDontes"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/rock"
+            android:layout_gravity="center"
+            android:id="@+id/imageView_DontesKo"/>
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/paper"
+            android:layout_gravity="center"
+            android:id="@+id/imageView_DontesPapir"/>
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/scissors"
+            android:layout_gravity="center"
+            android:id="@+id/imageView_DontesOllo"/>
+    </LinearLayout>
+</LinearLayout>
+

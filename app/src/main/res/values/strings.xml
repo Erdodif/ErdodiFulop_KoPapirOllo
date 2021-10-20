@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">KoPapirOllo</string>
+    <string name="dontetlenek">Döntetlenek száma:</string>
+    <string name="gep_dontes">A gép választása</string>
+    <string name="felhasznalo_dontes">A te választásod</string>
+    <string name="gep">Gép</string>
+    <string name="felhasznalo">Játékos</string>
 </resources>
