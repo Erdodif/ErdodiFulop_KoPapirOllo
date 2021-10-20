@@ -45,29 +45,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun init(){
+        dontetlenek = 0
+        gepElet = 3
+        felhasznaloElet = 3
+        gep = 0
+        eletAllit(3, true)
+        eletAllit(3, false)
+        val kiad = getString(R.string.dontetlenek)
+        bind.textViewDontetlenek.setText(kiad)
+    }
     private fun ujra(gyozelem: Boolean) {
         val fejlec = if (gyozelem) "Győzelem" else "Vereség"
         var dialogus = AlertDialog.Builder(this)
         dialogus.setTitle(fejlec)
         dialogus.setMessage("Szeretne Újból játszani?")
         dialogus.setPositiveButton("Igen") { _, _ ->
-            dontetlenek = 0
-            gepElet = 3
-            felhasznaloElet = 3
-            gep = 0
-            eletAllit(3, true)
-            eletAllit(3, false)
+            init()
         }
         dialogus.setNegativeButton("Nem") { _, _ ->
             exitProcess(0)
         }
         dialogus.setOnDismissListener {
-            dontetlenek = 0
-            gepElet = 3
-            felhasznaloElet = 3
-            gep = 0
-            eletAllit(3, true)
-            eletAllit(3, false)
+            init()
         }
         dialogus.show()
     }

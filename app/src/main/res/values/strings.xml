@@ -5,4 +5,10 @@
     <string name="felhasznalo_dontes">A te választásod</string>
     <string name="gep">Gép</string>
     <string name="felhasznalo">Játékos</string>
+    <string name="elet">Élet</string>
+    <string name="gepidontes">Gép döntése</string>
+    <string name="felhasznalodontes">Az ön döntése</string>
+    <string name="ko">Kő</string>
+    <string name="papir">Papír</string>
+    <string name="ollo">Olló</string>
 </resources>
