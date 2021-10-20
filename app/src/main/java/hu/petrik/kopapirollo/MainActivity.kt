@@ -1,14 +1,13 @@
 package hu.petrik.kopapirollo
 
+import hu.petrik.kopapirollo.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
+import kotlin.system.exitProcess
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import hu.petrik.kopapirollo.databinding.ActivityMainBinding
+import android.os.Bundle
 import java.util.*
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bind: ActivityMainBinding
@@ -53,11 +52,11 @@ class MainActivity : AppCompatActivity() {
         eletAllit(3, true)
         eletAllit(3, false)
         val kiad = getString(R.string.dontetlenek)
-        bind.textViewDontetlenek.setText(kiad)
+        bind.textViewDontetlenek.text = kiad
     }
     private fun ujra(gyozelem: Boolean) {
         val fejlec = if (gyozelem) "Győzelem" else "Vereség"
-        var dialogus = AlertDialog.Builder(this)
+        val dialogus = AlertDialog.Builder(this)
         dialogus.setTitle(fejlec)
         dialogus.setMessage("Szeretne Újból játszani?")
         dialogus.setPositiveButton("Igen") { _, _ ->
@@ -79,8 +78,8 @@ class MainActivity : AppCompatActivity() {
         val eredmeny = mi - gep
         if (eredmeny == 0) {
             dontetlenek++
-            val kiad = "${getString(R.string.dontetlenek)} ${dontetlenek}"
-            bind.textViewDontetlenek.setText(kiad)
+            val kiad = "${getString(R.string.dontetlenek)} $dontetlenek"
+            bind.textViewDontetlenek.text = kiad
             Toast.makeText(this, "Döntetlen", Toast.LENGTH_SHORT).show()
         } else if (eredmeny == 1 || eredmeny == -2) {
             //játékos győzelem az alábbiak szerint:
@@ -123,13 +122,13 @@ class MainActivity : AppCompatActivity() {
         val view = bind.root
         setContentView(view)
         bind.imageViewDontesKo.setOnClickListener {
-            jatszma(0);
+            jatszma(0)
         }
         bind.imageViewDontesPapir.setOnClickListener {
-            jatszma(1);
+            jatszma(1)
         }
         bind.imageViewDontesOllo.setOnClickListener {
-            jatszma(2);
+            jatszma(2)
         }
     }
 }
