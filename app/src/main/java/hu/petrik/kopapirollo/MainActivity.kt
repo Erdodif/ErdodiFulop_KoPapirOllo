@@ -3,20 +3,31 @@ package hu.petrik.kopapirollo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.ImageView
 import hu.petrik.kopapirollo.databinding.ActivityMainBinding
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bind: ActivityMainBinding
 
-    private fun jatszma(mi: Int) {
-        when (mi) {
+    private var gep = 0;
+    private var random : Random = Random()
+
+    private fun kepModosit(mire : Int, mit :ImageView){
+        when (mire) {
             0 ->
-                bind.imageViewFelhasznalo.setImageResource(R.drawable.rock)
+                mit.setImageResource(R.drawable.rock)
             1 ->
-                bind.imageViewFelhasznalo.setImageResource(R.drawable.paper)
+                mit.setImageResource(R.drawable.paper)
             2 ->
-                bind.imageViewFelhasznalo.setImageResource(R.drawable.scissors)
+                mit.setImageResource(R.drawable.scissors)
         }
+    }
+
+    private fun jatszma(mi: Int) {
+        kepModosit(mi, bind.imageViewFelhasznalo)
+        gep = random.nextInt(3)
+        kepModosit(gep,bind.imageViewGep)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
