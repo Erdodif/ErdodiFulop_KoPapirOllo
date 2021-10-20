@@ -49,11 +49,19 @@ class MainActivity : AppCompatActivity() {
         if (mi == gep){
             Toast.makeText(this, "Döntetlen", Toast.LENGTH_SHORT).show()
         }
-        else if(false){
-
+        else if(mi - gep == 1 || mi - gep == -2){
+            //játékos győzelem az alábbiak szerint:
+            //p1 - k0 = 1   Győzelem
+            //o2 - k0 = 2
+            //k0 - o2 = -2  Győzelem
+            //p1 - o2 = -1
+            //k0 - p1 = -1
+            //o2 - p1 = 1   Győzelem
+            Toast.makeText(this, "Gőzelem", Toast.LENGTH_SHORT).show()
         }
         else{
-
+            //gép győzelem
+            Toast.makeText(this, "Vereség", Toast.LENGTH_SHORT).show()
         }
     }
 
