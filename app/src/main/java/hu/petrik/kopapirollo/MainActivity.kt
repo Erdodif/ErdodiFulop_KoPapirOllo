@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.ImageView
+import android.widget.Toast
 import hu.petrik.kopapirollo.databinding.ActivityMainBinding
 import java.util.*
 
@@ -45,6 +46,15 @@ class MainActivity : AppCompatActivity() {
         kepModosit(mi, bind.imageViewFelhasznalo)
         gep = random.nextInt(3)
         kepModosit(gep, bind.imageViewGep)
+        if (mi == gep){
+            Toast.makeText(this, "Döntetlen", Toast.LENGTH_SHORT).show()
+        }
+        else if(false){
+
+        }
+        else{
+
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
