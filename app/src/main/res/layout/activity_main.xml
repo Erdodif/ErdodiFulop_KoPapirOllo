@@ -124,22 +124,22 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:src="@drawable/rock"
             android:layout_gravity="center"
             android:id="@+id/imageView_DontesKo"/>
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:src="@drawable/paper"
             android:layout_gravity="center"
             android:id="@+id/imageView_DontesPapir"/>
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:src="@drawable/scissors"
             android:layout_gravity="center"
             android:id="@+id/imageView_DontesOllo"/>
